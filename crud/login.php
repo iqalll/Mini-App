@@ -4,7 +4,7 @@ require '../config/database.php';
 
 $username = $_POST['username'];
 $pass = $_POST['pass'];
-$query = "SELECT * FROM  user WHERE username='$username'";
+$query = "SELECT * FROM  user WHERE username='$username' AND pass='$pass'";
 $sql = mysqli_query($conn, $query);
 $result = mysqli_num_rows($sql);
 // var_dump($result);
